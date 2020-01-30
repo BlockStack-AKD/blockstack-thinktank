@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import {connect} from 'react-redux';
 
 import { UserSession } from "blockstack";
 import { appConfig } from "../config/constants";
@@ -46,6 +47,7 @@ const SignedIn = props => {
             id: Math.random(),
             text: 'texthere'
         }
+
         datas.unshift(test);
         setData([{test}]);
         const options = { encrypt: false}
@@ -81,9 +83,6 @@ const SignedIn = props => {
             </Layout>
         </div>
     )
-}
+};
 
-
-  
-  export default SignedIn;
-
+export default SignedIn;

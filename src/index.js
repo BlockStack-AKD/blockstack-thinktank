@@ -7,18 +7,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
 // Components
 import App from './components/App';
-// // Services
-// import { Provider } from 'react-redux';
-// import thunk from 'redux-thunk';
-// import logger from 'redux-logger';
-
-// Service Worker
+// Services
 import registerServiceWorker from './registerServiceWorker';
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import logger from "redux-logger";
+import { createStore, applyMiddleware } from "redux";
+// Reducer
+import { rootReducer } from "./reducers/reducers";
+// Store
+const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 
 ReactDOM.render(
-        // <Provider store={store}>
+        <Provider store={store}>
             <App />
-        // </Provider>
+        </Provider>
 , document.getElementById('root'));
 registerServiceWorker();
