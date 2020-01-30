@@ -1,0 +1,23 @@
+.landing-body{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+.button-wrapper{
+    padding-top: 40vh;
+    padding-right: 50vw;
+    margin: 10px;
+}
+
+.landing-text {
+    padding: 0;
+    margin: 0;
+    color: #FCFCFD
+}
+
+.landing-button{
+    border-radius: 30px;
+    margin: 10px;
+    width: 140px;
+}
